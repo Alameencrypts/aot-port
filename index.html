@@ -196,17 +196,22 @@
   .hero-stat-stack {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 0;
+    border: 1px solid var(--green-border);
+    overflow: hidden;
   }
 
   .hero-stat {
-    background: rgba(8,13,8,0.7);
-    border: 1px solid var(--green-border);
+    background: rgba(5,9,5,0.96);
+    border: none;
+    border-bottom: 1px solid var(--green-border);
     padding: 24px 28px;
-    backdrop-filter: blur(8px);
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 16px;
+  }
+  .hero-stat:last-child {
+    border-bottom: none;
   }
   .hero-stat-num {
     font-family: 'Playfair Display', serif;
@@ -214,6 +219,7 @@
     font-weight: 700;
     color: var(--green);
     line-height: 1;
+    flex-shrink: 0;
   }
   .hero-stat-label {
     font-family: 'DM Mono', monospace;
